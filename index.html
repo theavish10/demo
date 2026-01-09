@@ -1,14 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Multiplication Of Three</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+        }
+
+        input[type="button"] {
+            padding: 10px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        input[type="button"]:hover {
+            background: #45a049;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+    </style>
 </head>
 
 <body>
-avddhsv
-</body>
 
+<div class="container">
+    <h2>Calculate Numbers</h2>
+
+    <table>
+        <tr>
+            <td>First Number</td>
+            <td><input type="text" id="fno"></td>
+        </tr>
+
+        <tr>
+            <td>Second Number</td>
+            <td><input type="text" id="sno"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Sum" onclick="sum()">
+                <input type="button" value="Subtract" onclick="sub()">
+                <input type="button" value="Multiply" onclick="multi()">
+                <input type="button" value="Divide" onclick="div()">
+            </td>
+        </tr>
+    </table>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function sum() {
+        let a = parseFloat(document.getElementById("fno").value);
+        let b = parseFloat(document.getElementById("sno").value);
+
+        document.getElementById("result").innerHTML =
+            "Summation = " + (a + b);
+    }
+
+    function sub() {
+        let a = parseFloat(document.getElementById("fno").value);
+        let b = parseFloat(document.getElementById("sno").value);
+
+        document.getElementById("result").innerHTML =
+            "Subtraction = " + (a - b);
+    }
+
+    function multi() {
+        let a = parseInt(document.getElementById("fno").value);
+        let b = parseInt(document.getElementById("sno").value);
+
+        document.getElementById("result").innerHTML = 
+            "Multiplication = " + (a * b);
+    }
+
+    function div() {
+        let a = parseFloat(document.getElementById("fno").value);
+        let b = parseFloat(document.getElementById("sno").value);
+
+        document.getElementById("result").innerHTML =
+            "Division = " + (a / b);
+    }
+
+    
+</script>
+</body>
 </html>
